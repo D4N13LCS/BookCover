@@ -18,7 +18,7 @@ formlog.addEventListener('submit', (evt)=>{
         sessionStorage.setItem("User1", document.querySelector("#iuser").value)
         console.log('ok')
         window.alert('Seja Bem Vindo ' + document.getElementById("iuser").value)
-        window.location.assign('http://localhost');
+        window.location.href = "index.html";
     }else{
         console.log('sem ok')
         window.alert('Usuário ou senha inválido')
