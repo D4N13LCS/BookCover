@@ -20,7 +20,7 @@ form.addEventListener('submit', (evt)=>{
                 if(res.ok){
                     console.log('ok')
                     window.alert('Cadastro realizado com sucesso!');
-                    location.assign(document.referrer)
+                    window.location.href = "logIn.html";
                 }else{
                     console.log('noão ok')
                     window.alert('Algo deu errado');
