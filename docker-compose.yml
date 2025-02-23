@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  app: 
+    container_name: app
+    build: 
+      context: .
+      dockerfile: ./Docker/app.dockerfile
+    restart: always
+    environment:
+      - APP_HOST=db
+      - APP_USER=manager
+      - APP_PASSWORD=manager
+      - APP_PORT=3306
+      - MYSQL_DATABASE=library
+      - senha=senha
+    ports:
+      - "3000:3000"
+    networks:
+      - book-rede
+    depends_on:
+      - db
+
+  db: 
+    container_name: banco
+    build:
+      context: .
+      dockerfile: ./Docker/db.dockerfile
+    restart: always
+    ports:
+      - "3306:3306"
+    networks:
+      - book-rede
+    environment:
+      - MYSQL_DATABASE=library
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_USER=manager
+      - MYSQL_PASSWORD=manager
+    
+    volumes:
+      - book_vol:/var/lib/mysql
+      - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./mysql/my.cnf:/etc/mysql/conf.d/my.cnf
+
+networks:
+  book-rede:
+    driver: bridge
+
+volumes:
+  book_vol:

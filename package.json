@@ -1,0 +1,32 @@
+{
+  "name": "bookcover",
+  "version": "1.0.0",
+  "description": "Biblioteca virtual com crud simples",
+  "main": "scripts/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node scripts/server.js"
+  },
+  "keywords": [
+    "library",
+    "biblioteca",
+    "book",
+    "livro",
+    "read",
+    "ler",
+    "write",
+    "escrever"
+  ],
+  "author": "Daniel Cardoso da Silva",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "jwt-decode": "^4.0.0",
+    "mysql2": "^3.12.0",
+    "nodemon": "^3.1.4"
+  }
+}
