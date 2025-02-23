@@ -35,21 +35,42 @@ Uma vez o carrinho aberto, você poderá visualizar todos os itens contidos nele
 
 ## -Menu da página-
 
-![readme1](https://github.com/user-attachments/assets/176166bb-d206-4e2f-a358-fecf4da8d2c9)
+
+
+![menuBook](https://github.com/user-attachments/assets/5a252962-8dc9-4881-9dad-14c5ee7ffc9a)
+
+
 
 ## seção recentes
 
-![readme2](https://github.com/user-attachments/assets/66ac7546-b0ee-4b53-ba5d-9000f192ab70)
+
+
+![recentesBook](https://github.com/user-attachments/assets/b5b7c579-cc7c-44dc-a01c-640567ecd833)
+
 
 
 ## -seção recomendados-
 
-![readme3](https://github.com/user-attachments/assets/a225b8e7-f68f-4ae0-9dd9-0e10343d4f7f)
+
+
+![bookRecomendado](https://github.com/user-attachments/assets/d98e4215-4fed-456d-8ce7-6992e986c79f)
+
 
 
 ## -seção de promoções-
 
-![readme4](https://github.com/user-attachments/assets/8220efec-f8ff-4373-8132-c575ab0f5130)
+
+
+![promoBook](https://github.com/user-attachments/assets/1f8fa025-c962-4b7c-9140-ac4921a1b1b5)
+
+
+
+## -seção sobre nós-
+
+
+
+![sobreBook](https://github.com/user-attachments/assets/a68a89e2-758e-457c-94e7-02636c4fd7f8)
+
 
 
 ### funcionalidades da página principal:
@@ -61,7 +82,7 @@ Uma vez o carrinho aberto, você poderá visualizar todos os itens contidos nele
 
 
 
-![readme8](https://github.com/user-attachments/assets/676031fe-95b7-4c92-8849-cb79fbc17b17)
+![bookcompra](https://github.com/user-attachments/assets/054ac2d6-29c0-46d7-8773-9624b5505582)
 
 
 
@@ -74,8 +95,7 @@ Uma vez o carrinho aberto, você poderá visualizar todos os itens contidos nele
 
 
 
-
-![readme7](https://github.com/user-attachments/assets/6fbffac6-900e-491e-aa36-9fe46526ffdb)
+![bookAddCart](https://github.com/user-attachments/assets/a2a6c796-12ed-4978-9f63-f9b9f68bedba)
 
 
 
@@ -84,10 +104,34 @@ Uma vez o carrinho aberto, você poderá visualizar todos os itens contidos nele
 
 # Página de Login:
 
-![readme5](https://github.com/user-attachments/assets/9f5af02e-1cee-4048-9dd5-b4c703659d57)
+![loginbook](https://github.com/user-attachments/assets/4b3cca04-74fb-4eec-a3df-1c409e8544cc)
+
 
 
 # Página de Cadastro:
 
-![readme6](https://github.com/user-attachments/assets/b96039fc-10ec-469a-9834-6f7b1d2dc501)
+![cadastroBook](https://github.com/user-attachments/assets/42e353eb-6029-440d-946d-3e83d713a101)
 
+
+# Teste você mesmo
+
+<img src="https://1000logos.net/wp-content/uploads/2021/11/Docker-Logo.png" height="120"/>
+
+Para testar essa aplicação, é necessário possuir o docker instalado e as seguintes portas disponíveis: 3000 e 3306.
+
+Após o docker instalado, faça o seguinte: 
+
+- clone esse repositório na sua máquina local por meio do seguinte comando: <code> git clone https://github.com/D4N13LCS/BookCover </code>
+- dentro do diretório onde os arquivos foram clonados, entre no diretório BookCover e utilize o comando: <code> docker compose up --build </code>
+- Por último, acesse http://localhost:3000 no seu navegador.
+
+## Banco de dados
+
+Caso deseje averiguar o comportamento das ações no banco de dados ou consultar os dados inseridos e/ou atualizados, faça o seguinte:
+
+- Execute o comando <code> docker ps </code> para obter o ID do container do banco de dados
+- Execute o comando <code> docker exec -it ID-do-container-do-banco-de-dados mysql -u manager -p</code> para acessar o banco de dados
+- Coloque manager quando for pedida a senha
+- após isso execute <code> USE library; </code>
+
+Agora basta testar o banco!
