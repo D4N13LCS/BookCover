@@ -70,6 +70,7 @@ nav span{
     padding: 20px;
     background-color: white;
     border-radius: 12px;
+    box-shadow: 2px 2px 7px 2px #00000091;
 }
 
 #container p{
@@ -110,6 +111,10 @@ div.item_cart{
 
 .especificacoes > div > input{
     width: 50px;
+}
+
+.especificacoes button:hover{
+    cursor: pointer;
 }
 
 .delete_btn{
@@ -295,6 +300,7 @@ div.item p{
 
 #container{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
