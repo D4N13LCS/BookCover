@@ -129,8 +129,12 @@ let r = 1;
 
 window.addEventListener('resize', ()=>{
     document.getElementById('cartmen').style.display = 'block';
+    document.getElementById('menu').style.display = 'none';
+    document.querySelector('nav span').style.display = 'none';
     if(769 > window.innerWidth && window.innerWidth >= 480){
         document.getElementById('cartmen').style.display = 'none';
+        document.querySelector('nav span').style.display = 'block';
+        document.querySelector('nav span').innerText = 'menu';
         promo.style.left = `${-228}px`
         promo.style.width = '1100px'
         ct = document.querySelector('#promo').getBoundingClientRect().left + 1;
@@ -152,6 +156,8 @@ window.addEventListener('resize', ()=>{
         ctp = ct;
     }else{
         document.getElementById('cartmen').style.display = 'none';
+        document.querySelector('nav span').style.display = 'block';
+        document.querySelector('nav span').innerText = 'menu';
         promo.style.left = `${-328}px`
         promo.style.width = '1600px'
         ct = document.querySelector('#promo').getBoundingClientRect().left + 1;
@@ -187,6 +193,7 @@ setInterval(a, 20);
 /* conexão com o back-end*/
 const body = document.getElementsByTagName('body')[0];
 const confirmacao = document.getElementById('confirmacao');
+const valor_confirmacao = document.getElementById('valor');
 const img_conf = document.querySelector('#confirmacao img');
 const h1_conf = document.querySelector('#confirmacao h1');
 const btn_conf = document.querySelector('#confirmacao button');
@@ -197,8 +204,8 @@ const url_prod = "http://localhost:3000/livros";
 let titulo_livro_selecionado; 
 
 btns.forEach((btn, ind) => {
-    btn.addEventListener('click', (evt) => {
-        if(btn.innerText == 'comprar'){
+    btn.addEventListener('click', async (evt) => {
+        if(btn.innerText === 'comprar'){
             document.getElementById('carrinho').style.display = 'none';
             document.getElementsByTagName('body')[0].style.overflowY = 'hidden';
             confirmacao.style.top = window.scrollY + 'px';
@@ -206,6 +213,24 @@ btns.forEach((btn, ind) => {
             titulo_livro_selecionado = imgs[ind].alt;
             img_conf.src = imgs[ind].src;
             h1_conf.innerText = titulo_livro_selecionado;
+
+            const token = sessionStorage.getItem('Key');
+            const url_cart = `http://localhost:3000/cart/${h1_conf.innerText}`;
+
+            try {
+                const result = await fetch(url_cart,{
+                    method: "GET",
+                    headers: {"Content-Type": "application/json", 
+                            "Authorization": "Bearer " + token}
+                })
+
+                const data = await result.json();
+                valor_confirmacao.value = data.preco
+            } catch (error) {
+                console.log('deu errado')
+                console.log(error)
+            }
+
         }
     });
 });
@@ -541,4 +566,3 @@ function listar_livros(lista){
 if(sessionStorage.getItem("Key")){
     login_ativado();
 }
-
