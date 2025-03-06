@@ -13,7 +13,16 @@ INSERT INTO livros(titulo_livro, quantidade, preco) VALUES
 
 CREATE TABLE users (
   id int primary key auto_increment,
-  username varchar(80) NOT NULL,
+  username varchar(80) NOT NULL UNIQUE,
   user_key varchar(80) NOT NULL
 );
 
+CREATE TABLE cart_items (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  user_id INT,
+  item VARCHAR(100) DEFAULT '',
+  qtd_item INT DEFAULT 0,
+  preco DECIMAL(10,2) DEFAULT 0.00,
+  link VARCHAR(255) DEFAULT '',
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
