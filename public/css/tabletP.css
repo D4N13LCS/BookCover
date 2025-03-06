@@ -7,6 +7,12 @@
     height: 25vh;
 }
 
+
+
+#confirmacao img{
+    height: 210px;
+}
+
 div.item{
     height: 750px;
 }

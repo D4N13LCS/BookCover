@@ -17,6 +17,12 @@ section#carousel{
     flex-basis: 1%;
 }
 
+
+
+#confirmacao img{
+    height: 190px;
+}
+
 div.item{
     height: 725px;
 }

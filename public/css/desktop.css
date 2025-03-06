@@ -64,18 +64,12 @@ nav span{
 
 #lista_cart{
     display: none;
+    gap: 20px;
     position: absolute;
     top: 25vh;
     padding: 20px;
     background-color: white;
     border-radius: 12px;
-}
-
-#lista_cart #container{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
 }
 
 #container p{
@@ -102,7 +96,7 @@ div.item_cart{
 .especificacoes{
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 12px;
 }
 
 .especificacoes > div{
@@ -118,10 +112,14 @@ div.item_cart{
     width: 50px;
 }
 
-#delete_btn{
-    height: 40px;
-    width: 100px;
-    align-self: center;
+.delete_btn{
+    width: 100%;
+    border-radius: 5px;
+    padding: 4px;
+    background-color: var(--cor4);
+    color: white;
+    border: 1px solid black;
+    font-weight: 500;
 }
 
 #ipreco_cart{
@@ -259,11 +257,7 @@ div.item p{
     cursor: pointer;
 }
 
-.remove_carrinho{
-    display: none;
-}
-
-.carrinho, .remove_carrinho{
+.carrinho{
     background-color: transparent;
     border: 1.5px solid var(--cor1);
     border-radius: 10px;
@@ -274,7 +268,7 @@ div.item p{
     color: var(--cor1);
 }
 
-.carrinho:hover, .remove_carrinho:hover{
+.carrinho:hover{
     background-color: var(--cor3);
     color: white;
     font-weight: 500;
@@ -303,6 +297,8 @@ div.item p{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 20px;
+    width: min-content;
 }
 
 #quantidade{
@@ -333,24 +329,35 @@ div.item p{
 #confirmacao, #carrinho{
     display:none;
     position: absolute;
+    justify-content: center;
     top: 100vh;
     height: fit-content;
-    width: 35%;
+    width: fit-content;
     padding: 28px 15px;
     background-color: whitesmoke;
     border-radius: 12px;
     box-shadow: 1.25px 1.5px 2.5px 1px black;
     transform: translateY(50%);
-}
 
+}
 
 #confirmacao h1, #carrinho h1{
     font-size: 1.15em;
     margin: 0px;
 }
 
+#quantidade div{
+    display: flex;
+    gap: 10px;
+}
+
+#quantidade input{
+    width: 65px;
+}
+
 #confirmacao img{
     height: 160px;
+   
 }
 
 .exemplar_item{
@@ -366,11 +373,13 @@ div.item p{
 
 .item_carrinho div{
     display: flex;
+    /* flex-wrap: wrap; */
     align-items: center;
     gap: 7.5px;
 }
 
-.item_carrinho button{
+
+.item_carrinho button, #quantidade button{
     border-radius: 5px;
     padding: 4px;
     background-color: var(--cor4);
@@ -431,27 +440,27 @@ div.item p{
 }
 
 .p_esquerda {
-    grid-area: 1 / 1 / 2 / 2; /* Ocupa a primeira célula */
+    grid-area: 1 / 1 / 2 / 2; 
     background-color: var(--cor3);
 }
 
 .pb_esquerda {
-    grid-area: 2 / 1 / 3 / 2; /* Ocupa a célula abaixo da primeira */
+    grid-area: 2 / 1 / 3 / 2; 
     background-color: var(--cor3);
 }
 
 .meio {
-    grid-area: 1 / 2 / 3 / 3; /* Ocupa a célula no meio, primeira linha */
+    grid-area: 1 / 2 / 3 / 3; 
     background-color: var(--cor3);
 }
 
 .p_direita {
-    grid-area: 1 / 3 / 2 / 4; /* Ocupa a célula na primeira linha, terceira coluna */
+    grid-area: 1 / 3 / 2 / 4; 
     background-color: var(--cor3);
 }
 
 .pb_direita {
-    grid-area: 2 / 3 / 3 / 4; /* Ocupa a célula abaixo da última */
+    grid-area: 2 / 3 / 3 / 4; 
     background-color: var(--cor3);
 }
 
