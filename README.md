@@ -35,21 +35,25 @@ Uma vez o carrinho aberto, você poderá visualizar todos os itens contidos nele
 
 ## -Menu da página-
 
-![readme1](https://github.com/user-attachments/assets/176166bb-d206-4e2f-a358-fecf4da8d2c9)
+![menuBook](https://github.com/user-attachments/assets/f986157f-9a3e-491c-8349-54f97d551144)
+
 
 ## seção recentes
 
-![readme2](https://github.com/user-attachments/assets/66ac7546-b0ee-4b53-ba5d-9000f192ab70)
+
+![recentesBook](https://github.com/user-attachments/assets/f44b389c-bddc-4bfe-9c2c-372d346d1343)
 
 
 ## -seção recomendados-
 
-![readme3](https://github.com/user-attachments/assets/a225b8e7-f68f-4ae0-9dd9-0e10343d4f7f)
+![bookRecomendado](https://github.com/user-attachments/assets/87be28d2-9c4e-4de1-824d-658d6bd44930)
+
 
 
 ## -seção de promoções-
 
-![readme4](https://github.com/user-attachments/assets/8220efec-f8ff-4373-8132-c575ab0f5130)
+![promoBook](https://github.com/user-attachments/assets/a9c45f54-f3a1-470b-b8ce-e58945cc62da)
+
 
 
 ### funcionalidades da página principal:
@@ -61,7 +65,8 @@ Uma vez o carrinho aberto, você poderá visualizar todos os itens contidos nele
 
 
 
-![readme8](https://github.com/user-attachments/assets/676031fe-95b7-4c92-8849-cb79fbc17b17)
+![bookcompranew](https://github.com/user-attachments/assets/0e066efb-3058-47b8-b771-37c55f0ff61f)
+
 
 
 
@@ -75,7 +80,8 @@ Uma vez o carrinho aberto, você poderá visualizar todos os itens contidos nele
 
 
 
-![readme7](https://github.com/user-attachments/assets/6fbffac6-900e-491e-aa36-9fe46526ffdb)
+![bookAddCart](https://github.com/user-attachments/assets/2fe9c6ea-e45f-4a73-aea4-ace4b27d9338)
+
 
 
 
@@ -84,10 +90,12 @@ Uma vez o carrinho aberto, você poderá visualizar todos os itens contidos nele
 
 # Página de Login:
 
-![readme5](https://github.com/user-attachments/assets/9f5af02e-1cee-4048-9dd5-b4c703659d57)
+![loginbook](https://github.com/user-attachments/assets/b1bc7602-7b6d-43f1-837b-812795f0e629)
+
 
 
 # Página de Cadastro:
 
-![readme6](https://github.com/user-attachments/assets/b96039fc-10ec-469a-9834-6f7b1d2dc501)
+![cadastroBook](https://github.com/user-attachments/assets/51824c2f-9e0e-4593-a69c-31b7c9ba8177)
+
 
