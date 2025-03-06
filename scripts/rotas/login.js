@@ -15,7 +15,7 @@ rotaLog.post('/', (req, res, next) => {
             });
         }
 
-        conex.query('SELECT username FROM users WHERE username = ? AND user_key = ?', 
+        conex.query('SELECT id, username FROM users WHERE username = ? AND user_key = ?', 
             [req.body.username, req.body.key], 
             (error, result) => {
                 conex.release();
@@ -26,7 +26,7 @@ rotaLog.post('/', (req, res, next) => {
                 }
                 if (result.length > 0) {
                     const token = jwt.sign({ username: req.body.username }, secret, { expiresIn: '2h' });
-                    res.status(200).json({ token });
+                    res.status(200).json({ token, result });
                 } else {
                     return res.status(401).send({
                         mensagem: "Usuário ou senha inválida"
