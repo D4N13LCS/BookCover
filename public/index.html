@@ -39,7 +39,7 @@
     <nav id="menu">
         <ul>
             <li><a href="#">gerenciar conta</a></li>
-            <li><a href="#">Meu carrinho</a></li>
+            <li><a href="#" id="meu_cart_mobile">Meu carrinho</a></li>
             <li><a href="#recentes">Recentes</a></li>
             <li><a href="#Recomendados">recomendados</a></li>
             <li><a href="#promo">Promoção da semana</a></li>
@@ -85,7 +85,6 @@
                 <button class="verMais" type="button">Ver mais</button>
                 <button class="botao" type="button">comprar</button>
                 <button type="button" class="carrinho">adicionar ao carrinho</button>
-                <button type="button" class="remove_carrinho">remover do carrinho</button>
             </div>
             <div class="item">
                 <img src="https://cdn.maioresemelhores.com/imagens/maiores-e-melhores-livros-de-fantasia-04-cke.jpg" alt="As crônicas de nárnia">
@@ -95,7 +94,6 @@
                 <button class="verMais" type="button">Ver mais</button>
                 <button class="botao" type="button">comprar</button>
                 <button type="button" class="carrinho">adicionar ao carrinho</button>
-                <button type="button" class="remove_carrinho">remover do carrinho</button>
             </div>
             <div class="item">
                 <img src="https://imgv2-1-f.scribdassets.com/img/word_document/433035385/original/a90571dc92/1628734144?v=1" alt="O príncipe">
@@ -105,16 +103,17 @@
                 <button class="verMais" type="button">Ver mais</button>
                 <button class="botao" type="button">comprar</button>
                 <button type="button" class="carrinho">adicionar ao carrinho</button>
-                <button type="button" class="remove_carrinho">remover do carrinho</button>
             </div>
             <div id="confirmacao">
                 <div id="container">
+                    <img src="https://imgv2-1-f.scribdassets.com/img/word_document/433035385/original/a90571dc92/1628734144?v=1" alt="exemplar">
                     <div id="quantidade">
-                        <label for="iproduto">Produto:</label>
                         <h1>O príncipe</h1>
-                        <img src="https://imgv2-1-f.scribdassets.com/img/word_document/433035385/original/a90571dc92/1628734144?v=1" alt="exemplar">
-                        <label for="iqtde">Quantidade:</label>
-                        <input type="number" min="1" value="1" id="iqtde">
+                        
+                        <div>
+                            <label for="iqtde">Quantidade:</label>
+                            <input type="number" min="1" value="1" id="iqtde">
+                        </div>
                         <button type="button">Finalizar compra</button>
                     </div>
                     
@@ -144,7 +143,7 @@
                         </div>
                        
                     </div>
-                    <button type="button">Adicionar</button>
+                    <button type="button">Adicionar ao carrinho</button>
                 </div>
                 <span class="material-symbols-outlined" id="fechar_it">
                     close
@@ -163,23 +162,23 @@
         <section id="promo" >
             <div>
                 <img src="https://images-na.ssl-images-amazon.com/images/I/91GbrdOty2L.jpg " alt="">
-                <p>&real; 45.00</p>
+            
             </div>
             <div>
                 <img src="https://images-na.ssl-images-amazon.com/images/I/91e6goXyrYL.jpg" alt="">
-                <p>&real; 75.00</p>
+            
             </div>
             <div>
                 <img src="https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781421506951/yuyu-hakusho-vol-10-9781421506951_hr.jpg" alt="">
-                <p>&real; 38.99</p>
+               
             </div>
             <div>
                 <img src="https://images-na.ssl-images-amazon.com/images/I/91tsyR6XqFL.jpg" alt="">
-                <p>&real; 85.90</p>
+              
             </div>
             <div>
                 <img src="https://cdn.maioresemelhores.com/imagens/maiores-e-melhores-livros-de-fantasia-22-cke.jpg" alt="">
-                <p>&real; 55.50</p>
+           
             </div>
         </section>
     </main>
@@ -201,7 +200,7 @@
         </div>
         <div id="copy">&copy; BookCover</div>
         <div id="redes">
-            <a href="#"><img id="github" src="https://pngimg.com/uploads/github/github_PNG58.png" alt="github logo"></a>
+            <a href="https://github.com/D4N13LCS" target="_blank"><img id="github" src="https://pngimg.com/uploads/github/github_PNG58.png" alt="github logo"></a>
             <a href="#"><img id="insta" src="http://www.pngall.com/wp-content/uploads/5/Instagram-Logo-PNG-Image-File.png" alt="instagram logo"></a>
             <a href="#"><img id="wpp" src="https://svgsilh.com/png-1024/2071331.png" alt=""></a>
         </div>
