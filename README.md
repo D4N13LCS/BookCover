@@ -99,3 +99,28 @@ Uma vez o carrinho aberto, você poderá visualizar todos os itens contidos nele
 ![cadastroBook](https://github.com/user-attachments/assets/51824c2f-9e0e-4593-a69c-31b7c9ba8177)
 
 
+# Teste você mesmo
+
+<img src="https://1000logos.net/wp-content/uploads/2021/11/Docker-Logo.png" height="120"/>
+
+Para testar essa aplicação, é necessário possuir o docker instalado e as seguintes portas disponíveis: 3000 e 3306.
+
+Após o docker instalado, faça o seguinte: 
+
+- clone esse repositório na sua máquina local por meio do seguinte comando: <code> git clone https://github.com/D4N13LCS/BookCover </code>
+
+- dentro do diretório <code>/BookCover</code>, utilize o comando: <code> docker compose up --build </code>
+
+- Por último, acesse http://localhost:3000 no seu navegador.
+
+
+## Banco de dados
+
+Caso deseje averiguar o comportamento das ações no banco de dados ou consultar os dados inseridos e/ou atualizados, faça o seguinte:
+
+- Execute o comando <code> docker ps </code> para obter o ID do container do banco de dados
+- Execute o comando <code> docker exec -it ID-do-container-do-banco-de-dados mysql -u manager -p</code> para acessar o banco de dados
+- Coloque manager quando for pedida a senha
+- após isso execute <code> USE library; </code>
+
+Agora é só testar!
